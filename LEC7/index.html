@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <h1>Fill below form</h1>
+    <form action="post">
+        <div>
+            <label for="username">Enter Your Username</label>
+        <input type="text" id="username" name="username" placeholder="Enter your Username">
+        </div>
+
+        <div>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+        </div>
+
+        <div>
+        <input type="checkbox" id="reading" name="hobbies" value="reading">
+        <label for="reading">Reading</label>
+        
+        <input type="checkbox" id="sports" name="hobbies" value="sports">
+        <label for="sports">Sports</label>
+        
+        <input type="checkbox" id="music" name="hobbies" value="music">
+        <label for="music">Music</label>
+        </div>
+
+        <div>
+            <label for="adress">Enter Your adress :-</label> <br>
+            <textarea name="" id="adress" cols="30" rows="2"></textarea>
+        </div>
+
+        <div>
+            <label for="fruits" id="fruits"> Choose fav fruit</label>
+            <select name="fruits" id="fruits">
+                <option value="apple">Apple</option>
+                <option value="banana">Banana</option>
+                <option value="peach">Peach</option>
+            </select>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        /* element selectors */
+        div{
+            background-color: red;
+        }
+
+        /* class selectors */
+        .green{
+            background-color: green;
+        }
+
+        /* child selector - give style to child tag in parent tag(child tag should be inside parent tag only)*/
+        div > p{
+            background-color: yellow;
+        }
+
+        /* descendent selector - tag should be inside main div tag not required to be direct child */
+        div p{
+            background-color: blue;
+        }
+
+        /* universal selector - * - applies to all */
+        *{
+            color: rgb(148, 152, 99) ;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* pseudo selectors - perform changes after specific work done*/
+        a:visited{
+            color: red;
+        }
+        /* show blue links if not :visited */
+        a:link{
+            color: blue;
+        }
+        /* when you click it changes color in a:active */
+        a:active{ 
+            background-color: yellow;
+        }
+        /* when you hover it changes color in a:hover */
+        a:hover{
+            background-color: hotpink;
+        }
+        /* apply style to first child of parent */
+        p:first-child{
+            background-color: grey;
+        }
+    </style>
+</head>
+<body>
+    <!-- created 2 child p in parent div -->
+    <div class="one"> 
+        <p>hello this is one</p>
+        <p>hello this is second</p>
+    </div>
+    <div>
+        I am div
+        <article>
+            <p>
+                This is paragraph in div
+            </p>
+        </article>
+    </div>
+    <div class="green">
+        This is another div
+    </div>
+    <a href="https://google.com" target="_blank">ગૂગલે  ડોટ કોમ </a>
+    <a href="https://googl.com" target="_blank">ગૂગલે  ડોટ કોમ </a>
+</body>
+</html>

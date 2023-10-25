@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title><Font></Font></title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600&family=Roboto+Mono:ital,wght@1,500&display=swap');
         h1{
@@ -16,15 +16,38 @@
             font-weight: 500;
             text-decoration: underline;
             */
-            font-family: 'Playfair Display', serif;
-            font-size: 22px;
+            font-family: 'Playfair Display', serif; /*for font styles*/
+            font-size: 22px; /*for font size*/
+            line-height: 0.9; /*for spcae between lines*/
+            letter-spacing: 1px; /*for space between letters*/
         } 
+        h2{
+            /*text-transform: lowercase; for lowercase*/
+            /*text-transform: uppercase; for uppercase*/
+            text-align: center;
+            text-transform: capitalize; /*for capitalize*/
+            text-decoration: underline; /*for underline style*/
+            text-decoration-color: aquamarine; /*for underline color*/
+            text-decoration-style: dashed; /*for underline style*/
+            text-decoration-thickness: 10px; /*for underline thickness*/
+            text-indent: 20px; /*for indent - space from leftside*/
+        }
+        .lorem{
+            border: 2px solid purple;
+            width: 90px;
+            /*text-overflow: ellipsis; for ...*/
+            /*text-overflow: clip; hide extra text*/
+            /* overflow: hidden; hide remaining which is out of box */
+            word-break: break-all; /*break word*/
+        }
     </style>
 </head>
 <body>
     <div>
         <h1>Fonts</h1>
+        <h2>about fonts</h2>
         <p>This is a video on Fonts.</p>
+        <p class="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi molestias eveniet fugiat est ab provident facilis alias reiciendis fuga soluta?</p>
     </div>
 </body>
 </html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*in css cascade algorithm applies which decide which property will apply on element and which not*/
+        h1{ /*element selector - point 1*/
+            color: aqua;
+        }
+        .yellow{ /*class selector*/
+            color: yellow;
+        }
+        .red{
+            color: red;
+        }
+        .purple{  /*whichever selector is last its property will apply and it overrides previous selector's properties*/
+            color: purple;
+        }
+        /* specificity - Specificity in CSS is a measure of how specific a selector is in targeting an HTML element, and it determines which CSS rules will be applied to that element. */
+        /* specificity order - inline style > id > class/ attribute > element > Universal*/
+        /* to calculate specificity & understand more - https://codewithharry.com/tutorial/css-specificity/ example is below*/
+        /*specificity ->
+        a - 1
+        harryclass = rohan-class = [href] = :hover = 10
+        total = 1+10+10+10+10 = 41*/
+        a.harryclass.rohan-class[href]:hover {
+            color: red;
+        }
+        /* [data-X="a"]{
+            background-color: green;
+        } attribute selector */
+    </style>
+</head>
+<body>
+    <div>
+        <h1 class="yellow red purple" data-X="a">CSS Specificity</h1>
+    </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            font-size: 10px; /*html is root element*/
+        }
+        .box{
+            box-sizing: border-box;
+            border: 2px solid black;
+            width: 10vw; /* this is the width of the viewport, for responsive design. It means 10% of particular display width*/
+            margin: auto; /* because the width is 10vw, the margin is auto, so it will be centered It will use in only block elements like div*/
+            background-color: aquamarine;
+            
+        }
+        .container{
+            box-sizing: border-box;
+            border: 2px solid black;
+            width: 30vw;
+            height: 50vh; /* this is the height of the viewport, for responsive design. It means 50% of particular display height*/
+            font-size: 16px;
+            margin: 23px auto;
+            background-color: aquamarine;
+        }
+        .container p{
+            font-size: 1.5em;  /*here p tag inherit fontsize of container class and multiply it with em & if we remove parent class font size then it will multiply with default size which is 16px*/
+            font-size: 2rem; /*rem multiply with root element font size which is 10px */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        This is a box. 
+    </div>
+    <div class="container">
+        <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste perspiciatis quod quis, facilis sunt quia, aliquam porro iure neque, non ex amet.
+        </p>
+    </div>
+</body>
+</html>

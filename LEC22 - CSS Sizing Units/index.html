@@ -24,7 +24,8 @@
             box-sizing: border-box;
             border: 2px solid black;
             width: 30vw;
-            height: 50vh; /* this is the height of the viewport, for responsive design. It means 50% of particular display height*/
+            /*height: 50vh;  this is the height of the viewport, for responsive design. It means 50% of particular display height*/
+            min-height: 80vh; /*to keep min height of 80vh wethere content have or not & it will increase automatically if we insert more content*/
             font-size: 16px;
             margin: 23px auto;
             background-color: aquamarine;
@@ -32,6 +33,17 @@
         .container p{
             font-size: 1.5em;  /*here p tag inherit fontsize of container class and multiply it with em & if we remove parent class font size then it will multiply with default size which is 16px*/
             font-size: 2rem; /*rem multiply with root element font size which is 10px */
+            width: 50%; /*it will take 50% of parent width*/
+        }
+        .vminmax{
+            box-sizing: border-box;
+            margin: 23px auto;
+            border: 2px solid black;
+            color: purple;
+            background-color: bisque;
+            width: 30vw;
+            /*width: 100vmin; for computer vmin=height & mobile vmin=width*/
+            /*width: 5vmax; for computer vmax=width & mobile vmax=height*/
         }
     </style>
 </head>
@@ -43,6 +55,9 @@
         <p>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste perspiciatis quod quis, facilis sunt quia, aliquam porro iure neque, non ex amet.
         </p>
+    </div>
+    <div class="vminmax">
+        Hey bro this is another div for vmin and vmax
     </div>
 </body>
 </html>

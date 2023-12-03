@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display Properties
+    </title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            border: 2px solid blue;
+            display: inline; /*This will make box div element as inline element*/
+            /*and for width, padding and margin to work properly then we have to set it to inline-block, otherwise it won't give any space from top*/
+            margin: 25px;
+            padding: 0.5px;
+        }
+        /*Display none - it will remove entire element with its margin padding etc.*/
+        /*visibility hidden - it will remove only element and its padding and margin will be as it is*/
+    </style>
+</head>
+<body>
+    <div class="box">
+        This is A Box.
+    </div>
+    <div class="box">This is Box2</div>
+    <span>I am a Good</span>
+    <span>Boi</span>
+</body>
+</html>

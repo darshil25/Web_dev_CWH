@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            border: 2px solid red;
+            padding: 34px;
+            box-shadow: 5px 5px 5px grey inset; /* offset-x | offset-y (x & y offset decides how much shadow spreads) | blur-radius | spread-radius | color | inset - shadow inside | outset - shadow outside */
+        }
+        .tshadow{
+            text-shadow: 3px 3px 3px rgb(120, 13, 13); /* offset-x | offset-y | blur-radius | color */
+            outline: 2px solid red;/*difference in border nd outline is that border is in box model where as outline out of box model*/
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        This is a Box
+    </div>
+    <p class="tshadow">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed, in.
+    </p>
+</body>
+</html>

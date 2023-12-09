@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Overflow</title>
+    <style>
+        .box1{
+            width: 30vw;
+            height: 15vh;
+            border: 3px solid greenyellow;
+            /*here content is overflowing from the border*/
+            /*overflow: scroll; add normal scrollbar vertically & horizontally*/
+            overflow: auto; /*add scrollbar only when needed*/
+            /*overflow: scroll; add scrollbar always*/
+            white-space: nowrap; /*adjust all text in first line and other line empty*/
+            text-overflow: ellipsis; /*add ... at the end of the text*/
+            overflow-x: hidden; /*hide horizontal scrollbar*/
+            overflow-y: scroll; /*show vertical scrollbar only*/
+            /*below comand can use as replacement of above x and y*/
+            overflow: hidden scroll;/*hide horizontal scrollbar and show vertical scrollbar*/
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, quia molestiae ad architecto sit odit iure omnis dolorem et corporis repellendus odio, obcaecati ex consequuntur nesciunt pariatur! Minima distinctio mollitia deserunt quibusdam temporibus, aperiam accusamus quo est, laudantium iusto velit!
+    </div>
+</body>
+</html>

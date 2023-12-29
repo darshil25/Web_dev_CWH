@@ -18,14 +18,16 @@
         }
         .box1{
             background-color: royalblue;
-            /* position: absolute; when position is absolute it go nearest position ansistors which is parent if parent did not have any position related property then it look for its parent whose order is parent -> body -> html || here nothing have position property so it directly touches html tag means top */
-            height: 120px;
+             position: absolute; /*when position is absolute it go nearest position ansistors which is parent if parent did not have any position related property then it look for its parent whose order is parent -> body -> html || here nothing have position property so it directly touches html tag means top */
+            top: 0px;
+            left: 3px;
+            /* height: 120px;
             margin: 0px;
             padding: 0px;
             width: 100%;
-            top: 0px;
+            
             left: 50px;
-            position: sticky; /* sticky position is same as relative but it is relative to the browser window not to the parent */
+            position: sticky; sticky position is same as relative but it is relative to the browser window not to the parent */
         }
         .box2{
             background-color: rosybrown;
@@ -40,15 +42,20 @@
             bottom: 0px;
             left: 8vw; */
         }
+        
         .box4{
             background-color: lightseagreen;
         }
 
         .parent{
+            /* transform, filter, or perspective properties can also make an element appear as positioned so if it not mention type of position of parent then these 3 are appear as a position properties to them*/
             padding: 43px;
             margin: 34px;
             border: 3px solid brown;
-            /* position: absolute; if we set parent position absolute then all object have absolute posion will move according to parent */
+            /*position: absolute; if we set parent position absolute then all object have absolute posion will move according to parent*/
+            transform: translate(0); /*translate is used to move the object from its original position*/
+            /*filter: invert(); invert is used to invert the color of the object*/
+            perspective: 0px; /*perspective is used to make the object 3d*/
         }
     </style>
 </head>

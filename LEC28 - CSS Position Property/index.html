@@ -9,32 +9,55 @@
             margin: 0;
             padding: 0;
         }
-        .box1{
-            background-color: royalblue;
-        }
-        .box2{
-            background-color: rosybrown;
-            position: relative;
-        }
-        .box3{
-            bbackground-color: lightgreen;
-        }
-        .box4{
-            background-color: lightseagreen;
-        }
         .box{
-            height: 100px;
+            height: 400px;
             width: 80vw;
             padding: 3px;
             margin: 3px;
             border: 2px solid black;
         }
+        .box1{
+            background-color: royalblue;
+            /* position: absolute; when position is absolute it go nearest position ansistors which is parent if parent did not have any position related property then it look for its parent whose order is parent -> body -> html || here nothing have position property so it directly touches html tag means top */
+            height: 120px;
+            margin: 0px;
+            padding: 0px;
+            width: 100%;
+            top: 0px;
+            left: 50px;
+            position: sticky; /* sticky position is same as relative but it is relative to the browser window not to the parent */
+        }
+        .box2{
+            background-color: rosybrown;
+            /* position: relative; /*by relative property it can move over other objects*/
+            top: 35px;
+            left: 50px; */
+        }
+        .box3{
+            height: 120px;
+            background-color: pink;
+            /* position: fixed; /* fixed position is fixed to the browser window it does not move when we scroll the page */
+            bottom: 0px;
+            left: 8vw; */
+        }
+        .box4{
+            background-color: lightseagreen;
+        }
+
+        .parent{
+            padding: 43px;
+            margin: 34px;
+            border: 3px solid brown;
+            /* position: absolute; if we set parent position absolute then all object have absolute posion will move according to parent */
+        }
     </style>
 </head>
 <body>
-    <div class="box box1"></div>
-    <div class="box box2"></div>
-    <div class="box box3"></div>
-    <div class="box box4"></div>
+    <div class="parent">
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+        <div class="box box4"></div>
+    </div>
 </body>
 </html>

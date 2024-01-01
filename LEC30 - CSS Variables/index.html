@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables</title>
+    <style>
+        :root{  /* :root is the declaration for variable */
+            --color: orange;
+            --seccolor: rgb(156, 125, 68);
+            --border: magenta;
+            --defpad: 20px; /*default padding*/
+            --defop: 0.8; /*default opacity*/
+        }
+        *{
+            margin: 0;
+            padding: var(--defpad);
+        }
+        .nav{
+            background-color: var(--color);
+        }
+        ul{
+            display: flex;
+        }
+        ul li{
+            list-style: none;
+            padding: 34px;
+            border: 2px solid var(--border);
+        }
+        ul li:first-child{
+            --color: rgb(149, 150, 67);  /* we can change the variable value in any element and it became global to local variable for that element */
+            background-color: var(--color, green);  /* if the variable is not defined then it will take the default value as green*/
+        }
+        .container{
+            background-color: var(--seccolor);
+            opacity: var(--defop);
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt quas molestias dicta veniam ex, dolorum accusamus eum quae quaerat incidunt, modi optio? Et voluptates, deserunt illum enim rerum sapiente in quam quo suscipit odio optio explicabo repudiandae alias, corporis nisi placeat tempore. Omnis, beatae saepe!
+    </div>
+</body>
+</html>

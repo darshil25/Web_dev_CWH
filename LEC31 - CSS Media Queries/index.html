@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Media Queries</title>
+    <style>
+        body{
+            background-color: red;
+        }
+
+        @media screen and (orientation: landscape){ /* This is the media query execute when orientation will be landscape. */
+            body{
+                border: 10px solid pink;
+            }
+        }
+        @media only screen and (max-width: 455px){ /* This is the media query execute when max width will be 455px. */
+            body{
+                background-color: green;
+            }
+            .boxes{
+                flex-direction: column;
+            }
+        }
+
+        .boxes{
+            display: flex;
+        }
+        .box{
+            width: 344px;
+            height: 344px;
+            margin: 3px;
+            padding: 3px;
+            background-color: steelblue;
+        }
+    </style>
+</head>
+<body>
+    <!-- Media Queries used to make responsive web pages for different devices. -->
+    <div>
+        रोम रोम सारेयने, यो वेबपेज लाल होवे|
+    </div>
+    <div class="boxes">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>

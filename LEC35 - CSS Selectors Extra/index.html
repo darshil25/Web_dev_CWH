@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More CSS Selectors</title>
+    <style>
+        /*.box:first-child{  /*here box first child is basically lorem text so it imply on that
+            background-color: red;
+        }
+        .box::first-line{  /*here box first line will get yellow, if in small width device only first line gets yellow
+            color: yellow; 
+        }*/
+
+        /*.boxes *{ to select all elements within boxes class
+            border: 2px solid purple;
+        }
+
+        p, a, .box, [data-color="primary"]{ /*Attribute selector, we can use it in all classes, elements etc
+            we can also make groups to apply same effect like we done here
+            margin-top: 45px;
+            padding-top: 30px;
+        }*/
+
+        /*.box:nth-child(even){ /*can apply property to all even classes
+            background-color: green;
+        }*/
+
+        /*.box:nth-last-child(1){ /*can apply property to last nth child class
+            background-color: green;
+        }*/
+
+        .boxes::before{ /*These are pseudo elements || can add elenments using css dynamically*/
+            content: "I am noob Developer";
+        }
+
+        .boxes::after{
+            content: "I will become pro Developer";
+            color: royalblue;
+        }
+
+        ::selection{ /*can change the color of selected text*/
+            color: aqua;
+            background-color: brown;
+        }
+
+        .box::first-letter{ /*can change the color of first letter of the text*/
+            color: peachpuff;
+        }
+
+        input::placeholder{
+            color: blue;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="boxes">
+        <div class="box" data-color="primary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quibusdam laudantium porro officia quis nemo sunt cumque nihil sint placeat excepturi, natus ut magni fugit nesciunt reiciendis deleniti. Dolore magni repudiandae a veniam magnam minus minima! Ea, explicabo! Deleniti consequatur debitis asperiores explicabo atque adipisci velit expedita itaque eius tenetur amet, accusantium vel omnis recusandae libero voluptates repudiandae iste. Dolor, odit eum saepe laboriosam cum corrupti velit molestiae quam temporibus in nam nemo!</div>
+        <div class="box">Hey I am a Box</div>
+        <div class="box">Hey I am a Box</div>
+        <input type="text" placeholder="Type your text here">
+    </div>
+</body>
+</html>

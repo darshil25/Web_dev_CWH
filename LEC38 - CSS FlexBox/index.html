@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS FlexBox</title>
+    <style>
+        .container{
+            border: 2px solid violet;
+            height: 60vh;
+            display: flex; /*flexbox*/
+
+            /*justify-content: center; center the items to the top line of div
+            
+            there is no justify-items in flexbox like justify-content*/
+
+            align-items: center; /*center the items of div  only used when we have one line */
+
+            /*align-content: center; It will align the items in center of div, used when we have multiple lines*/
+
+            /*flex-direction: column; it will align items in column*/
+
+            /*flex-direction: column-reverse; it will align items in column reverse*/
+            /*flex-direction: row; it will align items in row, which is default but you can use this fun also*/
+
+            /*flex-direction: row-reverse; it will align items in row reverse*/
+
+            flex-wrap: wrap; /*If items were flowing out of area then it will wrap the items in next line, it also have multiple properties like no wrap etc.*/
+
+            /*gap: 13px; It will create gap between items, it is same as margin but it will not effect the size of div, it is only used in flexbox*/
+
+            /*row-gap: 40px; It will create gap between items in row*/
+
+            /*column-gap: 10px; It will create gap between items in column*/
+
+            /*gap: 40px 10px; It will create gap between items in row and column can use instead of separate row & column gap properties*/
+        }
+        .item{
+            width: 62px;
+            height: 62px;
+            border: 2px solid black;
+            margin: 4px;
+            background-color: rosybrown;
+            /* flex properties of items👇👇👇👇 */
+            flex-grow: 1; /*It will increase the size of items, by default it is 0*/
+        }
+
+        .item-1{
+            /*flex-grow: 2; It will take double size related to other items*/
+
+            align-self: flex-start; /*It will align the item to the top of div, It used when we want to override parent property to align self item*/
+        }
+
+        .item-2{
+            flex-shrink: 2; /*It will decrease the size of items, by half bcz its value is 2*/
+        }
+        .order-1{ /*જેટલો આઇટમ નો ઓર્ડર વધારે એટલો તે છેલ્લે આવે અને જેટલો ઓર્ડર ઓછો એટલો તે પેલો  આવે*/
+            order: 1; /*It will change the order of items, by default order is 0*/
+        }
+        .order-2{
+            order: 2;
+        }
+        .order-3{
+            order: 3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item-1">1</div>
+        <div class="item item-2">2</div>
+        <div class="item">3</div>
+        <div class="item order-1">4</div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+    <h2>default flex direction is -------------></h2>
+    <p>It is called Main Axis, The axis which is horizontal is not used default. It is called Cross Axis</p>
+    <h3>If flex direction changes to colum then axis roles will reverse</h3>
+</body>
+</html>

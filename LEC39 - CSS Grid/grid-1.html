@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        /*IN GRID-1 WE WILL GIVE NAME TO ROWS AND COLUMNS*/
+        .container{
+            border: 2px solid black;
+            display: grid; /*it can not adjust item in row like flexbox automatically*/
+            /*you can define different row and column in grid*/
+            /*grid-template-columns: [pelo] 120px [bijo] 100px; it will create 2 column with 120px and 100px width*/ 
+            /*[pelo] and [bijo] are name of column you can decide by default it gave as numbers 1,2,3,..*/
+            /*first item will be in first col, 2nd in 2nd col, 3rd in again 1st col likewise...*/
+            /*grid-template-rows: 100px 100px 100px; it will create 3 row with 100px height*/
+            width: 80vw;
+            height: 100vh;
+            /*grid-template-columns: 1fr 2fr 1fr; it will create 3 column with fr  width, fr - fraction*/
+            /*gap: 34px; it will create gap between items*/
+            /*grid-template-columns: repeat(3, 1fr); it will create 3 column with fr  width, fr - fraction*/
+            grid-template-columns: repeat(4, minmax(100px, 1fr));
+            row-gap: 10px; /*it will create gap between rows*/
+            column-gap: 30px; /*it will create gap between columns*/
+            justify-items: center; /*it will align all items in center (it have multiple options for positions) - row direction*/
+            align-items: center; /*it will align all items in center (it have multiple options for positions) - column direction*/
+            place-content: center; /*it will align all items in center (it have multiple options for positions) - row and column direction*/
+        }
+        .item{
+            border: 2px solid red;
+            height: 55px;
+            width: 55px;
+            
+        }
+        .item-1{
+            align-self: start; /*it will align item-1 in start position (top-down)*/ 
+            justify-self: end; /*it will align item-1 in end position (left-right)*/
+        }
+
+        /*.item-4{
+            grid-row: 1/2; it will take 1st grid start and 2nd row start*/
+            /* or you can do
+            grid-row-start: 1;
+            grid-row-end: 2; 
+            grid-column: 1/bijo; /*it will take 1st col start and 2nd col start*/
+            /* or you can do
+            grid-column-start: 1;
+            grid-column-end: 2; 
+        }
+        .item-1{ /*both item-1 and item-4 will overlap
+            grid-row: 1/2;  
+            grid-column: 1/2; 
+        }*/
+    </style>
+</head>
+<body>
+    <H2>justify & align items used when items were in cells</H2>
+    <h2>when container is big and grid is small then justify & align content were used</h2>
+    <div class="container">
+        <div class="item item-1">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item item-4">4</div>
+        <div class="item">5</div>
+    </div>
+</body>
+</html>

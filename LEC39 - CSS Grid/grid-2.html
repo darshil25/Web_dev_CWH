@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        /*IN GRID-2 WE WILL GIVE NAME TO AREA*/
+        .container{
+            border: 2px solid black;
+            display: grid; 
+            grid-template-areas: "nav nav nav"
+                                 "side article article"
+                                 "footer footer footer";
+        }
+        .item{
+            border: 2px solid red;
+            height: 55px;
+            /* width: 55px; */
+        }
+
+        .item-1{ 
+            grid-area: nav; /*it will take nav area*/
+            background-color: aqua;
+        }
+        .item-2{ 
+            grid-area: side; /*it will take side area*/
+            background-color: burlywood;
+        }
+        .item-3{ 
+            grid-area: article; /*it will take article area*/
+            background-color: chartreuse;
+        }
+        .item-4{
+            grid-area: footer; /*it will take footer area*/
+            background-color: darkmagenta;
+        }
+        .item-5{ 
+            grid-area: nav; /*it will take nav area and overlaps item-1*/
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item-1">1</div>
+        <div class="item item-2">2</div>
+        <div class="item item-3">3</div>
+        <div class="item item-4">4</div>
+        <div class="item item-5">5</div>
+    </div>
+</body>
+</html>

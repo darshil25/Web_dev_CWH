@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transforms</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            height: 50px;
+            width: 50px;
+            padding: 5px 5px;
+            border: 2px solid black;
+            background-color: aqua;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /*transform: rotate(45deg); it rotates box by 45 deg */
+            /* transform: rotate(0.25turn); it rotates box by 90 deg */
+            /* transform: rotateX(30deg); it rotates box 30deg on x axis you can do same on y and z axis too */
+            /* transform: scale(1.5); it scales the box by 1.5 times */
+            /* transform: scaleX(1.3); it scales the box by 1.3 times on x axis, y and z too */
+            /* transform: scale3d(1.2, 1.2, 1.2); it scales the box by 1.2 times on x, y and z axis */
+            /* transform: skew(10deg); it skews the box by 10deg on x axis, y  - trasu thai jay */
+            /* transform: skewX(10deg); it skews the box by 10deg on x axis, y  too */
+            /* transform: skewY(10deg); it skews the box by 10deg on y axis, x  too */
+            /* transform: translate(35px); it moves the box by 35px on x axis */
+            /* transform: translateY(30px); it moves the box by 30px on y axis */
+            /* transform: translate(30px) skew(30deg) translateY(10px); you can add multiple properties in transform */
+            transform-origin: -0% -0%; /* it changes the origin (centre) of the box */
+            transform: rotate(45deg); /* it rotates box by 45 deg around transform-origin*/
+        }
+        .container{
+            width: 100vw;
+            height: 80vh;
+            border: 2px solid purple;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"> This is Box</div>
+    </div>
+</body>
+</html>

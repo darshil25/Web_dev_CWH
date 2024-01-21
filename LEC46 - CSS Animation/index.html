@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation</title>
+    <style> 
+        .container{
+            background-color: antiquewhite;
+            width: 30vw;
+            height: 80vh;
+        }
+        .box{
+            
+            width: 34px;
+            height: 35px;
+            /* animation-name: animationnam;
+            animation-duration: 3s;
+            animation-iteration-count: infinite; /*we can set how many times it*/
+            /*animation-timing-function: ease-in-out; animation style same as transition*/
+            /*animation-delay: 1s; delay the animation*/
+            /*animation-direction: reverse; reverse the animation*/
+            /*animation-play-state: paused; pause the animation at anytime, it generally done via javascript */
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: animationnam 3s ease-in-out 3s 1,
+                        bijuanimation 3s ease-in-out 3s 1;
+        }
+
+        @keyframes animationnam {
+            from{
+                background-color: red;
+            }
+            to{
+                background-color: blue;
+                /* transform: translateX(1000px); */
+            }
+        }
+        @keyframes bijuanimation { /*can also add multiple animations*/
+            0%{
+                transform: rotate(100deg);
+            }
+            20%{
+                transform: rotate(200deg);
+            }
+            40%{
+                transform: rotate(300deg);
+            }
+            60%{
+                transform: rotate(400deg);
+            }
+            80%{
+                transform: rotate(180deg);
+            }
+            100%{
+                transform: rotate(270deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Boksh</div>
+    </div>
+    
+</body>
+</html>

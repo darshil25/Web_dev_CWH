@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transition</title>
+    <style>
+        .container{
+            background-color: aquamarine;
+            width: 50vw;
+            height: 40vh;
+        }
+        .box{
+            background-color: rgb(117, 68, 167);
+            width: 5vw;
+            height: 4vh;
+            /*transition-property: transform; on which property you weant to apply transition || for multiple properties use "," and to apply in all use "all"*/
+            /*transition-duration: 3s; total duration of transition*/
+            /*transition-timing-function: ease-in-out; timing function*/
+            /*transition-delay: 1s; delay before transition starts*/
+            /* to apply all at once use this:- */
+            transition: all 3s ease-in-out 1s; /*shows -> property | duration | function | delay*/
+        }
+        .translate{
+            transform: translate(10vh, 10vw);
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box translate"></div>
+    </div>
+</body>
+</html>

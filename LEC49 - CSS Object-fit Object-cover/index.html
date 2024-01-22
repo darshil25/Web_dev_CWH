@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Object-fit and Object cover</title>
+    <style>
+        
+        .container{
+            background-color: aqua;
+            background-image: url("https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+            background-position: center center; /*it will place image in center of container*/
+            background-repeat: repeat-y; /*you can decide whether you want to repeat image or not, if yes then in which direction (like repeat-x)*/
+            width: 688px;
+            height: 634px;
+            border: 2px solid black;
+        }
+        img{
+            width: 466px;
+            height: 488px;
+            /*with object fit you can decide how image should be in box and with object-property you can decide what will be it's position*/
+            /*object-fit: cover; it covers given width & height of img and to do so it cut itself to maintain aspect ration*/
+            /*object-position: bottom-right; similar to above fit, when it cut image it allow you to decide which part you want to show*/
+            object-position: 10px 20px; /*it will move image 10px from left and 20px from top*/
+            /*object-fit: contain; it place itself in given parameters and leave space if w & h ration is not simillar to its aspect ration*/
+            object-fit: fill; /*it stretch itself to given width & height*/
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg" alt="">
+    </div>
+</body>
+</html>

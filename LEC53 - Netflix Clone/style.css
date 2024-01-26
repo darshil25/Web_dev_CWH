@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@600&family=Poppins:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: black;
+}
+
+.main{
+    background-image: url(assets/images/bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: max(1200px, 100vw);
+    height: 99vh;
+    position: relative;
+}
+
+.main .box{
+    position: absolute;
+    height: 99vh;
+    width: 100%;
+    background-color: black;
+    opacity: 0.6;
+    top: 0;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 69vw;
+    margin: auto;
+    height: 62px;
+}
+
+nav img{
+    color: #e50914;
+    width: 130px;
+    position: relative;
+    z-index: 10;
+}
+
+nav button{
+    position: relative;
+    z-index: 10;
+}
+
+.tex{
+    font-family: 'Martel Sans', sans-serif;
+     height: calc(100% - 62px); /*height taken by .tex is 100% of its parent + 62px of nav, so we subtract them to get .line below .tex area */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+    position: relative;
+    gap: 23px;
+    padding:0 30px;
+}
+
+.tex > :first-child{
+    font-weight: 900;
+    font-size: 48px;
+    text-align: center;
+}
+
+.tex > :nth-child(2){
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.tex > :nth-child(3){
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.line{
+    height: 7px;
+    background-color: #232323;
+}

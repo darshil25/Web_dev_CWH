@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .card {
+        display: flex;
+        border: 2px solid black;
+        width: 900px;
+        background-color: #0f0f0f;
+        color: #f1f1f0;
+        padding: 12px;
+        margin: 5px;
+        align-items: center;
+        }
+
+        .image img {
+        width: 200px;
+        border-radius: 4px;
+        }
+
+        .image{
+            padding-right: 10px;
+            position: relative;
+        }
+        .image .duration{
+            position: absolute;
+            z-index: 10;
+            bottom: 7px;
+            right: 15px;
+            background: #31302f;
+            border-radius: 3px;
+            padding: 2px;
+            opacity: 0.9;
+            font-size: 16px;
+        }
+
+        .text h1 {
+        padding: 2px 0;
+        }
+
+        p {
+        padding: 2px 0;
+        color: #738a92;
+        }
+    </style>
+    </head>
+
+    <body>
+    <div class="container">
+        <div class="card">
+        <div class="image">
+            <img
+            src="https://i.ytimg.com/vi/UzYRQURh_pY/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCqIwQwDx1EIDwleUS2D1CGiar3LQ" alt=""/>
+            <div class="duration">33:05</div>
+        </div>
+        <div class="text">
+            <h1>Intro to Web Dev Development with Harry #2</h1>
+            <p>CodeWithHarry | 772K views | 2 months old</p>
+        </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    </body>
+</html>

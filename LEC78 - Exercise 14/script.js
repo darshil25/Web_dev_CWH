@@ -1,4 +1,9 @@
 
+document.addEventListener("contextmenu", (e) => {
+    alert("koi BKL hi hoga jo right click krke inspect krega");
+    e.preventDefault();
+});
+
 const addItem = async (item) => {
     await timeDelay();
     let div = document.createElement("div");

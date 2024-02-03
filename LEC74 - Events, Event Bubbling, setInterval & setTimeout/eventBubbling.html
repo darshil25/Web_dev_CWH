@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling</title>
+    <style>
+        .child{
+            background-color: rosybrown;
+            margin: 14px;
+            padding: 14px;
+            cursor: pointer;
+            border: 2px solid red;
+        }
+        .childcontainer{
+            background-color: lightblue;
+            margin: 14px;
+            padding: 14px;
+            cursor:all-scroll;
+        }
+        .container{
+            background-color: lightgreen;
+            margin: 14px;
+            padding: 14px;
+            cursor: progress;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        container
+        <div class="childcontainer">
+            child container
+            <div class="child">
+                This is a child
+            </div>
+        </div>
+    </div>
+    <script>
+        // Event Bubbling - It is a process of event propagation in which the event moves from the innermost element and then to the outermost element. -> means when click on child then childcontainer then container then it will show alert in this order.
+
+        //to stop event bubbling we use event.stopPropagation() method.
+        document.querySelector(".child").addEventListener("contextmenu", (e) =>{
+            e.stopPropagation();
+            alert("child is clicked");
+        })
+        
+        document.querySelector(".childcontainer").addEventListener("contextmenu", (e) =>{
+            e.stopPropagation();
+            alert("childcontainer is clicked");
+        })
+
+        document.querySelector(".container").addEventListener("contextmenu", () =>{
+            alert("container is clicked");
+        })
+
+        //if you want to do task which will repeat in gicen time interval then use setInterval() method.
+
+        function randomC(){
+            let r = Math.floor(0+ Math.random()*255);
+            let g = Math.floor(0+ Math.random()*255);
+            let b = Math.floor(0+ Math.random()*255);
+            return `rgb(${r}, ${g}, ${b})`;
+        }
+        // let a = setInterval(() => {
+        //     document.querySelector(".childcontainer").style.backgroundColor = randomC();
+        // }, 3000); //3000 means 3 seconds.
+        // console.log(a); //if you want to stop this then use clearInterval(a) method.
+
+        //setTimeOut() method is used to do task after given time interval.
+
+        let a = setTimeout(() => {
+            document.querySelector(".childcontainer").style.backgroundColor = randomC();
+        }, 3000); //after every 3 seconds it will change the color of childcontainer.
+
+        //before setTimeout() method we can use clearTimeout() method to stop the setTimeout() method.
+        
+        console.log(a);
+    </script>
+</body>
+</html>

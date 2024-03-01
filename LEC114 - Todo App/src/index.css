@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  --tw-bg-opasity:1;
+  background-color: #e1d1b0;
+}

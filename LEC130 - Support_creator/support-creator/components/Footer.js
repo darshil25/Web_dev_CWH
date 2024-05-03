@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import CBbutton from '../reusable/CB_button'
+import CBbutton from '../app/reusable/CB_button'
 
 const Footer = () => {
   return (
